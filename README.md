@@ -68,12 +68,12 @@ ReferalsHub Platform/
    ```
 3. Run the application jar by setting the database and JWT environments:
    ```bash
-   # On Windows (PowerShell):
-   $env:SPRING_DATASOURCE_URL="jdbc:mysql://localhost:3306/referalshub?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
-   $env:SPRING_DATASOURCE_USERNAME="root";
-   $env:SPRING_DATASOURCE_PASSWORD="YOUR_PASSWORD";
-   $env:JWT_SECRET="404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970";
-   java -jar target/platform-0.0.1-SNAPSHOT.jar
+    # On Windows (PowerShell):
+    $env:SPRING_DATASOURCE_URL="jdbc:mysql://localhost:3306/referalshub?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
+    $env:SPRING_DATASOURCE_USERNAME="YOUR_DB_USERNAME";
+    $env:SPRING_DATASOURCE_PASSWORD="YOUR_DB_PASSWORD";
+    $env:JWT_SECRET="YOUR_JWT_SECRET";
+    java -jar target/platform-0.0.1-SNAPSHOT.jar
    ```
    *The backend will start on* **`http://localhost:8080`**.
 
@@ -102,7 +102,4 @@ docker-compose up --build
 * Access Backend: `http://localhost:8080`
 * Access Database: `localhost:3306`
 
----
 
-## 🌐 Cloud Deployment
-For deploying the database to the cloud (Aiven/Clever Cloud), backend API to **Render**, and React frontend to **Vercel**, refer to the detailed [DEPLOYMENT_GUIDE.md](file:///c:/Users/Cloud/Desktop/ReferalsHub%20Platform/DEPLOYMENT_GUIDE.md).
